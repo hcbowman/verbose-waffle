@@ -185,10 +185,6 @@ PODS:
     - FBSDKLoginKit/Login (= 5.15.1)
   - FBSDKLoginKit/Login (5.15.1):
     - FBSDKCoreKit (~> 5.0)
-  - FBSDKShareKit (5.15.1):
-    - FBSDKShareKit/Share (= 5.15.1)
-  - FBSDKShareKit/Share (5.15.1):
-    - FBSDKCoreKit (~> 5.0)
   - Firebase/Analytics (6.23.0):
     - Firebase/Core
   - Firebase/Auth (6.23.0):
@@ -250,6 +246,8 @@ PODS:
     - "gRPC-C++ (= 0.0.9)"
     - leveldb-library (~> 1.22)
     - nanopb (~> 0.3.901)
+  - FirebaseFirestoreSwift (0.2):
+    - FirebaseFirestore (>= 1.6.1, ~> 1.6)
   - FirebaseInstallations (1.2.0):
     - FirebaseCore (~> 6.6)
     - GoogleUtilities/Environment (~> 6.6)
@@ -321,15 +319,12 @@ PODS:
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
-  - FacebookCore
   - FacebookLogin
-  - FBSDKCoreKit
-  - FBSDKLoginKit
-  - FBSDKShareKit
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Firestore
+  - FirebaseFirestoreSwift
   - GoogleSignIn
 
 SPEC REPOS:
@@ -341,7 +336,6 @@ SPEC REPOS:
     - FacebookLogin
     - FBSDKCoreKit
     - FBSDKLoginKit
-    - FBSDKShareKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -351,6 +345,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnosticsInterop
     - FirebaseDatabase
     - FirebaseFirestore
+    - FirebaseFirestoreSwift
     - FirebaseInstallations
     - GoogleAppMeasurement
     - GoogleDataTransport
@@ -373,7 +368,6 @@ SPEC CHECKSUMS:
   FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
   FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
   FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
-  FBSDKShareKit: 259737eab3cc807087374553abdf588b3096ba55
   Firebase: 585ae467b3edda6a5444e788fda6888f024d8d6f
   FirebaseAnalytics: 558f7a03d19de451093032c806f39d5f9dff096e
   FirebaseAuth: e50319ecc114acf93c2b9581e15d6604ddd7eeb2
@@ -383,6 +377,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnosticsInterop: 296e2c5f5314500a850ad0b83e9e7c10b011a850
   FirebaseDatabase: cbf2b9efe39b3f113616a2f1f140839f49d797e0
   FirebaseFirestore: f5c1798bf8ab3f7ce96adb5f259eed8c698941fd
+  FirebaseFirestoreSwift: 0437bb10d83f8161a9131da1739998254c78fdf5
   FirebaseInstallations: 2119fb3e46b0a88bfdbf12562f855ee3252462fa
   GoogleAppMeasurement: 2253e99c1f22638cf234c059144660c338ad76c3
   GoogleDataTransport: 061fe7d9b476710e3cd8ea51e8e07d8b67c2b420
@@ -397,6 +392,6 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: 64deeeff00a4bfab3b3f3968eaef6a3d255aa338
+PODFILE CHECKSUM: 7be18587e472e763dddcd1cf13cd39f42772dd30
 
 COCOAPODS: 1.9.1

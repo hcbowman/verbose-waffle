@@ -9,7 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
-import FBSDKShareKit
+//import FBSDKShareKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

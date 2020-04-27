@@ -10,7 +10,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="project1_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="BYZ-38-t0r" customClass="HomeViewController" customModule="project1_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,11 +76,11 @@
             <objects>
                 <tableViewController id="TZi-5d-AfB" customClass="HostTableViewController" customModule="project1_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NwZ-5k-c16">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="z6G-pY-vn5" customClass="MusicItemTableViewCell" customModule="project1_2" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="musicItemCell" id="z6G-pY-vn5" customClass="MusicItemTableViewCell" customModule="project1_2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z6G-pY-vn5" id="Zyo-HZ-GTV">
@@ -105,11 +105,11 @@
             <objects>
                 <viewController id="h9S-vo-StX" customClass="SettingsViewController" customModule="project1_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a4i-vF-2sV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWh-kX-FFz">
-                                <rect key="frame" x="175.66666666666666" y="157.66666666666666" width="63" height="21"/>
+                                <rect key="frame" x="175.66666666666666" y="130.66666666666666" width="63" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="2019" y="213"/>
         </scene>
-        <!--Registration View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="XIP-LL-msI">
             <objects>
-                <viewController id="WED-9W-YUy" customClass="RegistrationViewController" customModule="project1_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WED-9W-YUy" customClass="SignUpViewController" customModule="project1_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ipH-A9-utp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -285,7 +285,6 @@
                                             <state key="normal" image="goButton"/>
                                             <connections>
                                                 <action selector="goButton:" destination="WeE-5v-Eex" eventType="touchUpInside" id="TgN-ec-AvT"/>
-                                                <segue destination="BYZ-38-t0r" kind="show" identifier="signInToHomeSegue" id="v4O-by-RkR"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -393,7 +392,6 @@
                                             <state key="normal" image="saveButton"/>
                                             <connections>
                                                 <action selector="saveButton:" destination="zTP-GV-87u" eventType="touchUpInside" id="TlJ-aM-Jcs"/>
-                                                <segue destination="BYZ-38-t0r" kind="show" identifier="newAccntToHomeSegue" id="uIm-gU-rCu"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -416,6 +414,11 @@
                         <constraint firstItem="JGB-b6-8Ze" firstAttribute="centerY" secondItem="zTP-GV-87u" secondAttribute="centerY" id="kFS-A8-wKF"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="3gb-PV-XxA"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="gQU-I3-lMc" id="c5N-8A-8eP"/>
+                        <outlet property="passwordTextField" destination="Xxh-hi-vc1" id="UXq-a4-wqu"/>
+                        <outlet property="reEnterPasswordTextField" destination="WQ4-dM-i2f" id="2Ip-Ff-KEt"/>
+                    </connections>
                 </view>
             </objects>
             <point key="canvasLocation" x="676.81159420289862" y="1273.6607142857142"/>
@@ -425,7 +428,7 @@
             <objects>
                 <viewController id="Sa5-Jk-BFb" customClass="AboutViewController" customModule="project1_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sn3-fC-FAg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sw5-WW-sMt" userLabel="mapType">
@@ -516,16 +519,13 @@
             <point key="canvasLocation" x="-233.33333333333334" y="1273.6607142857142"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="v4O-by-RkR"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Horizontal line 1" width="366" height="24"/>
         <image name="Just Sign In......" width="168" height="28"/>
         <image name="backround" width="414" height="896"/>
         <image name="cancelButton" width="124" height="94"/>
         <image name="createAccountButton" width="294" height="94"/>
-        <image name="goButton" width="294" height="94"/>
+        <image name="goButton" width="209" height="94"/>
         <image name="saveButton" width="209" height="94"/>
         <image name="signInButtonApple" width="294" height="94"/>
         <image name="signInButtonFacebook" width="294" height="94"/>

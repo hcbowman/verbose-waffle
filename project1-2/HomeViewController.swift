@@ -20,13 +20,13 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func signOut(_ sender: UIButton) {
-      let firebaseAuth = Auth.auth()
-      do {
-        try firebaseAuth.signOut()
-        dismiss(animated: true, completion: nil)
-      } catch let signOutError as NSError {
-        print ("Error signing out: \(signOutError.localizedDescription)")
-      }
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            dismiss(animated: true, completion: nil)
+        } catch let signOutError as NSError {
+            print ("Error signing out: \(signOutError.localizedDescription)")
+        }
     }
     
     
