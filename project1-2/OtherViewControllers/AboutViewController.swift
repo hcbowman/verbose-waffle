@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class OtherViewController: UIViewController {
+class AboutViewController: UIViewController {
     
     var coords: CLLocationCoordinate2D?
     
@@ -110,7 +110,7 @@ class OtherViewController: UIViewController {
         //let textField = UITextField(frame: CGRect(x: 20.0, y:90.0, width: 280.0, height: 44.0))
         
         //searchTextField.delegate = self
-        searchTextField.returnKeyType = .done
+        //searchTextField.returnKeyType = .done
         //searchTextField.backgroundColor = UIColor.white
     }
     

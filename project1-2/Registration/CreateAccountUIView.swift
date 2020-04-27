@@ -55,7 +55,8 @@ class CreateAccountUIView: UIView {
                         }
                     }
                     
-                    // Transition to the home screen
+                    // Transition to the home screen notification
+                    NotificationCenter.default.post(name: NSNotification.Name("CAViewSaveButtonHit"), object: nil)
                     
                 }
                 
@@ -72,7 +73,7 @@ class CreateAccountUIView: UIView {
     
     // MARK: - Helper Functions
     
-    // Checks/Validates the fields; returns nil if good, error if not good
+    // Checks and Validates the fields; returns nil if good, error if not good
     func validateFields() -> String? {
         
         // Check that all fields are filled in
@@ -105,21 +106,6 @@ class CreateAccountUIView: UIView {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^[A-Za-z\\d$@$#!%*?&]{3,}$")
         return passwordTest.evaluate(with: password)
     }
-    
-    func transitionToHome() {
-        
-        let homeViewController = storyboard?.instantiateViewController(identifier: "homeVC") as? HomeViewController
-        
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
-        
-    }
-    
-//    func showError(_ message:String) {
-//
-//        errorLabel.text = message
-//        errorLabel.alpha = 1
-//    }
 
     /*
     // Only override draw() if you perform custom drawing.

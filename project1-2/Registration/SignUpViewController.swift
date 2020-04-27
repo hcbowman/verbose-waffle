@@ -40,6 +40,8 @@ class SignUpViewController: UIViewController {
         //init notification receiver
         NotificationCenter.default.addObserver(self, selector: #selector(caViewWasCancelled), name: NSNotification.Name("CAViewCancelButtonHit"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(siViewWasCancelled), name: NSNotification.Name("SIViewCancelButtonHit"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(caViewSaveButtonHit), name: NSNotification.Name("CAViewSaveButtonHit"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(siViewGoButtonHit), name: NSNotification.Name("SIViewGoButtonHit"), object: nil)
         
         effect = visualEffectView.effect
         visualEffectView.effect = nil
@@ -164,13 +166,23 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    @objc private func caViewSaveButtonHit() {
+        print("RegistrationViewController was alerted about caViewSaveButtonHit!")
+        animateOutCA()
+        transitionToHome()
+    }
     @objc private func caViewWasCancelled() {
-        print("RegistrationViewController was alerted about cancelButtonHit!")
+        print("RegistrationViewController was alerted about caViewWasCancelled!")
         animateOutCA()
     }
     @objc private func siViewWasCancelled() {
-        print("RegistrationViewController was alerted about cancelButtonHit!")
+        print("RegistrationViewController was alerted about siViewWasCancelled!")
         animateOutSI()
+    }
+    @objc private func siViewGoButtonHit() {
+        print("RegistrationViewController was alerted about siViewGoButtonHit!")
+        animateOutSI()
+        transitionToHome()
     }
     
     func animateOutCA() {
@@ -301,18 +313,15 @@ class SignUpViewController: UIViewController {
         
     }
     
-    
-    
-
-    
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func transitionToHome() {
+        
+        let homeViewController = storyboard?.instantiateViewController(identifier: "homeVC") as? HomeViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
+        
     }
-    */
 
 }

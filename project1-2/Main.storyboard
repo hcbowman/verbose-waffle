@@ -22,7 +22,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="57" height="30"/>
                                         <state key="normal" title="Host"/>
                                         <connections>
-                                            <segue destination="TZi-5d-AfB" kind="show" id="qu4-8Q-Kcs"/>
+                                            <segue destination="TZi-5d-AfB" kind="show" identifier="toHostTableView" id="qu4-8Q-Kcs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXk-OG-htN">
@@ -308,6 +308,10 @@
                         <constraint firstItem="TpC-cq-T5h" firstAttribute="centerX" secondItem="WeE-5v-Eex" secondAttribute="centerX" id="TtB-2S-7AR"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="Z3M-VP-Z4e"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="YXH-f3-D7f" id="nSU-jD-pr9"/>
+                        <outlet property="passwordTextField" destination="vKp-Lb-kJo" id="85i-wP-Isr"/>
+                    </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTP-GV-87u" customClass="CreateAccountUIView" customModule="project1_2" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="374" height="564"/>

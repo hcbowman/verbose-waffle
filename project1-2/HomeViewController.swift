@@ -10,10 +10,10 @@ import UIKit
 import Firebase
 
 class HomeViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -30,16 +30,29 @@ class HomeViewController: UIViewController {
     }
     
     
-    
-
-    /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "toHostTableView":
+            if let tableViewController: HostTableViewController = segue.destination as? HostTableViewController {
+                print("Host")
+            }
+        case "toSettingsView":
+            if let viewController: SettingsViewController = segue.destination as? SettingsViewController {
+                print("Settings")
+            }
+        case "toAboutView":
+            if let tableViewController: AboutViewController = segue.destination as? AboutViewController {
+                print("About")
+            }
+        default:
+            print("to no where...")
+        }
     }
-    */
-
+    
+    
 }
