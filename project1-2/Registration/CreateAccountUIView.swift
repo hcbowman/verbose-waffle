@@ -27,8 +27,11 @@ class CreateAccountUIView: UIView {
         } else {
             
             // Create cleaned versions of the data
-            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+//            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+//            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            let email = emailTextField.text!
+            let password = passwordTextField.text!
             
             // Create the user
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
@@ -77,6 +80,13 @@ class CreateAccountUIView: UIView {
     func validateFields() -> String? {
         
         // Check that all fields are filled in
+//        if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+//            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+//            reEnterPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+//
+//            print("fill in all fields")
+//        }
+        // Check that all fields are filled in
         if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             reEnterPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
@@ -84,14 +94,16 @@ class CreateAccountUIView: UIView {
             print("fill in all fields")
         }
         
-        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        //let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cleanedPassword = passwordTextField.text!
         
         // Checks if password format is correct
         if isPasswordValid(cleanedPassword) == false {
             print("Password Needs: at least 3 letters and/or numbers")
         }
         
-        let rePassword = reEnterPasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        //let rePassword = reEnterPasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let rePassword = reEnterPasswordTextField.text!
         
         // Checks if passwords match
         if rePassword != cleanedPassword {

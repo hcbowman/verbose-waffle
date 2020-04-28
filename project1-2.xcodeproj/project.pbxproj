@@ -12,6 +12,7 @@
 		5525E100244FF3AD0017031D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5525E0FF244FF3AD0017031D /* HomeViewController.swift */; };
 		5537D7F6244F9D65008E9717 /* CreateAccountUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5537D7F5244F9D65008E9717 /* CreateAccountUIView.swift */; };
 		553A041524570BF9006B21D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 553A041424570BF9006B21D4 /* GoogleService-Info.plist */; };
+		553B09A924574072005EB34A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553B09A824574072005EB34A /* MapKit.framework */; };
 		5553D408244EEB5D001BFC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553D407244EEB5D001BFC1C /* AppDelegate.swift */; };
 		5553D40A244EEB5D001BFC1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553D409244EEB5D001BFC1C /* SceneDelegate.swift */; };
 		5553D411244EEB61001BFC1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5553D410244EEB61001BFC1C /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		5525E0FF244FF3AD0017031D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5537D7F5244F9D65008E9717 /* CreateAccountUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountUIView.swift; sourceTree = "<group>"; };
 		553A041424570BF9006B21D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		553B09A824574072005EB34A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5553D404244EEB5D001BFC1C /* project1-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project1-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5553D407244EEB5D001BFC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5553D409244EEB5D001BFC1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553B09A924574072005EB34A /* MapKit.framework in Frameworks */,
 				4BDFA622F311B3E9521ED875 /* Pods_project1_2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +141,7 @@
 		74ADE6CDC1726886183A6E70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				553B09A824574072005EB34A /* MapKit.framework */,
 				543ADE2CAFE17D3B7ECE3365 /* Pods_project1_2.framework */,
 			);
 			name = Frameworks;

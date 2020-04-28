@@ -61,9 +61,10 @@ class SignUpViewController: UIViewController {
         let loginManager = LoginManager()
         loginManager.logIn(
             permissions: [.email],
-            viewController: self)
-        { result in
-            self.loginManagerDidComplete(result)
+            viewController: nil
+            ) {
+                result in
+                self.loginManagerDidComplete(result)
         }
         
     }
@@ -86,9 +87,8 @@ class SignUpViewController: UIViewController {
 
         case .success(let grantedPermissions, _, _):
             
-            // [START headless_facebook_auth]
+            
             let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
-            // [END headless_facebook_auth]
             self.firebaseLogin(credential)
             
             alertController = UIAlertController(
@@ -96,10 +96,9 @@ class SignUpViewController: UIViewController {
                 message: "Login succeeded with granted permissions:\n\(grantedPermissions)", preferredStyle: .alert
             )
         }
-        self.present(alertController, animated: true, completion: nil)
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {
+        alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: {
             action in
-                 // Called when user taps outside
+            // Called when user taps outside
         }))
         
     }

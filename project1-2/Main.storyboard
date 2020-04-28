@@ -233,13 +233,13 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="tLr-tR-llc">
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="34"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YXH-f3-D7f">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YXH-f3-D7f">
                                                     <rect key="frame" x="11" y="0.0" width="344" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="JpR-lF-Wof"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                                                 </textField>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Horizontal line 1" translatesAutoresizingMaskIntoConstraints="NO" id="cVJ-pF-CRG">
                                                     <rect key="frame" x="0.0" y="10" width="366" height="24"/>
@@ -258,7 +258,7 @@
                                                         <constraint firstAttribute="height" constant="20" id="RfP-Wf-GhJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 </textField>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Horizontal line 1" translatesAutoresizingMaskIntoConstraints="NO" id="mHR-wI-3aC">
                                                     <rect key="frame" x="0.0" y="10.000000000000028" width="366" height="24"/>
@@ -331,7 +331,7 @@
                                                         <constraint firstAttribute="height" constant="20" id="pLI-CK-3V4"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                                                 </textField>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Horizontal line 1" translatesAutoresizingMaskIntoConstraints="NO" id="qAa-EF-LwN">
                                                     <rect key="frame" x="0.0" y="10" width="366" height="24"/>
@@ -350,7 +350,9 @@
                                                         <constraint firstAttribute="height" constant="20" id="7jt-CI-o9l"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password">
+                                                        <passwordRules key="passwordRules" passwordRulesDescriptor="&quot;required: upper; required: lower; minlength: 8;&quot;"/>
+                                                    </textInputTraits>
                                                 </textField>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Horizontal line 1" translatesAutoresizingMaskIntoConstraints="NO" id="nI5-GP-vVS">
                                                     <rect key="frame" x="0.0" y="10" width="366" height="24"/>
@@ -369,7 +371,9 @@
                                                         <constraint firstAttribute="height" constant="20" id="0if-ue-ce5"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password">
+                                                        <passwordRules key="passwordRules" passwordRulesDescriptor="&quot;required: upper; required: lower; minlength: 8;&quot;"/>
+                                                    </textInputTraits>
                                                 </textField>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Horizontal line 1" translatesAutoresizingMaskIntoConstraints="NO" id="0in-7A-efp">
                                                     <rect key="frame" x="0.0" y="10" width="366" height="24"/>
